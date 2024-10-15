@@ -4,9 +4,26 @@
 using namespace std;
 
 void game_logic(int n, int turns);
-void easy();
-void medium();
-void hard();
+void easy()
+{
+    srand(time(0));
+    int n = rand() % 10 + 1;
+    game_logic(n, 5);
+}
+void medium()
+{
+    srand(time(0));
+    int n = rand() % 100 + 1;
+    game_logic(n, 10);
+}
+void hard()
+{
+    int low = -500;
+    int high = 500;
+    srand(time(0));
+    int n = rand() % (high - low + 1) + low;
+    game_logic(n, 15);
+}
 
 int main(void)
 {
