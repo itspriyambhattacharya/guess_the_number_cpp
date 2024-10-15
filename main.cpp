@@ -3,7 +3,31 @@
 #include <ctime>
 using namespace std;
 
-void game_logic(int n, int turns);
+void game_logic(int n, int turns)
+{
+    int counter = 0;
+    int guess;
+    while (counter < turns)
+    {
+        cout << "\nEnter our guess:\t";
+        cin >> guess;
+        if (guess > n)
+        {
+            cout << "\nToo large. Try again...\n";
+            counter++;
+        }
+        else if (guess < n)
+        {
+            cout << "\nToo small. Try again...\n";
+            counter++;
+        }
+        else
+        {
+            cout << "\nYou guessed it in " << counter + 1 << " attempts\n";
+            break;
+        }
+    }
+}
 void easy()
 {
     srand(time(0));
