@@ -3,6 +3,15 @@
 #include <ctime>
 using namespace std;
 
+void cls()
+{
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
+}
+
 void game_logic(int n, int turns)
 {
     int counter = 0;
@@ -24,15 +33,20 @@ void game_logic(int n, int turns)
         }
         else
         {
-            cout << "\nYou guessed it in " << counter + 1 << " attempts\n";
             fl = 1;
             break;
         }
     }
+    cls();
+    cout << "\nResult\n";
     if (fl == 0)
     {
         cout << "\nYou loose.\n";
         cout << "\nThe number is " << n << endl;
+    }
+    else
+    {
+        cout << "\nYou guessed it in " << counter + 1 << " attempts\n";
     }
 }
 void easy()
@@ -62,6 +76,7 @@ int main(void)
     cout << "\nGuess the Number\n";
     cout << "\nEnter level:\n1 for Easy (Number between 1 to 10)\n2 for Medium (Number between 1 to 100)\n3 for Hard (Number between -500 to 500)\nEnter your choice:\t";
     cin >> ch;
+    cls();
 
     if (ch == 1)
     {
