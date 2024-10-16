@@ -7,6 +7,7 @@ void game_logic(int n, int turns)
 {
     int counter = 0;
     int guess;
+    int fl = 0;
     while (counter < turns)
     {
         cout << "\nEnter our guess:\t";
@@ -24,8 +25,14 @@ void game_logic(int n, int turns)
         else
         {
             cout << "\nYou guessed it in " << counter + 1 << " attempts\n";
+            fl = 1;
             break;
         }
+    }
+    if (fl == 0)
+    {
+        cout << "\nYou loose.\n";
+        cout << "\nThe number is " << n << endl;
     }
 }
 void easy()
