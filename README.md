@@ -1,4 +1,3 @@
-
 # Guess the Number Game
 
 A fun and challenging C++ console game where you try to guess a randomly generated number. The game offers three difficulty levels: Easy, Medium, and Hard, each with different ranges and number of attempts.
@@ -53,3 +52,7 @@ Enter level:
 ```
 
 Enjoy the game and have fun guessing!
+
+## License
+
+This project is open-source and available under the MIT License.
